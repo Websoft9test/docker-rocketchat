@@ -21,7 +21,7 @@ services:
 
   mongo:
     image: mongo:${DB_MONGO_VERSION}
-    container_name: ${APP_NAME}-mongo
+    container_name: ${APP_NAME}-db
     volumes:
       - mongo:/data/db
     command: mongod --smallfiles --oplogSize 128 --replSet rs01
